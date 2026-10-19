@@ -127,6 +127,7 @@ import {LAMPLIGHT_DEMO_FRAMES, LamplightDemo} from './library/previews/Lamplight
 import {TACTICAL_DEMO_FRAMES, TacticalDemo} from './library/previews/TacticalDemo';
 import {WARM_DESK_DEMO_FRAMES, WarmDeskDemo} from './library/previews/WarmDeskDemo';
 import {EDITOR_ROOM_DEMO_FRAMES, EditorRoomDemo} from './library/previews/EditorRoomDemo';
+import {NOCTURNE_DEMO_FRAMES, NocturneDemo} from './library/previews/NocturneDemo';
 import {WARM_DESK_SHOW_FRAMES, WarmDeskCoverDemo, WarmDeskShowDemo} from './library/previews/WarmDeskShowDemo';
 import {PixelWardrobe} from './library/previews/PixelWardrobe';
 import {Wardrobe} from './library/previews/Wardrobe';
@@ -236,6 +237,7 @@ export const Root: React.FC = () => (
       <Composition id="library-tactical" component={TacticalDemo} durationInFrames={TACTICAL_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-warm-desk" component={WarmDeskDemo} durationInFrames={WARM_DESK_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-editor-room" component={EditorRoomDemo} durationInFrames={EDITOR_ROOM_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
+      <Composition id="library-nocturne" component={NocturneDemo} durationInFrames={NOCTURNE_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-warm-desk-show" component={WarmDeskShowDemo} durationInFrames={WARM_DESK_SHOW_FRAMES} fps={FPS} width={1920} height={1080} />
       <Still id="library-warm-desk-cover" component={WarmDeskCoverDemo} width={1080} height={1440} />
       <Composition id="library-pixel-wardrobe" component={PixelWardrobe} durationInFrames={150} fps={FPS} width={1080} height={1080} />
