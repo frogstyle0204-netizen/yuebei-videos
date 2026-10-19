@@ -3,7 +3,7 @@ import {AbsoluteFill} from 'remotion';
 import {clamp01, easeIn, easeInOut, easeOut, rand} from '../anim';
 
 /**
- * 3：尼采权力与意志的转场和光效：光环脉冲、白光爆闪、墨团吞没、压缝翻开、透视 → 俯视升机位、推近穿线。
+ * 3：尼采与权力意志的转场和光效：光环脉冲、白光爆闪、墨团吞没、压缝翻开、透视 → 俯视升机位、推近穿线。
  * 这套风格几乎不硬切，场景之间靠这些「元素贯穿」的动作接起来。
  */
 

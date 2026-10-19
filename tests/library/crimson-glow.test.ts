@@ -2,7 +2,7 @@ import {describe, expect, it} from 'vitest';
 import {joints, mixPose, ovalPoint, pose} from '../../src/library/crimson-glow/props';
 import {blurIn, vis, withAlpha} from '../../src/library/crimson-glow/theme';
 
-describe('3：尼采权力与意志 crimson-glow', () => {
+describe('3：尼采与权力意志 crimson-glow', () => {
   it('模糊柔入：at 之前不可见，10 帧后完全清晰；退场后归零', () => {
     expect(blurIn(0, 10).v).toBe(0);
     const done = blurIn(20, 10);
