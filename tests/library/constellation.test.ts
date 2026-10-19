@@ -4,7 +4,7 @@ import {figureStrokes, wheelStrokes} from '../../src/library/constellation/props
 import {inverted, parseCap} from '../../src/library/constellation/stage';
 import {capFade, flashAt, haze, paceLines, reframe, RHYTHM} from '../../src/library/constellation/theme';
 
-describe('星图线描风 constellation', () => {
+describe('3：虚无主义 constellation', () => {
   it('串珠：等距取点，首尾都在线上，u 从 0 到 1', () => {
     const pts = resample([[0, 0], [100, 0]], 10);
     expect(pts.length).toBe(11);

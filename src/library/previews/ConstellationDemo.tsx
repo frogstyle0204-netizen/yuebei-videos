@@ -8,7 +8,7 @@ import {ChapterTag, DotWord, FlashFrame, GhostWord, HookLine, Impact, ImpactWord
 import {K, KF, paceLines, reframe} from '../constellation/theme';
 
 /**
- * 星图线描风素材一览（1920×1080，50 秒）：每 150 帧一场，场与场之间用这套风格自己的转场
+ * 3：虚无主义素材一览（1920×1080，50 秒）：每 150 帧一场，场与场之间用这套风格自己的转场
  * （星尘溶解、冲击白闪、白纸反转、模糊交叉淡化），最后硬切回第一场的画面演示首尾循环。
  * 示例题目「为什么我们只能看到月亮的一面」，文案只用来检查组件的样子和动效。
  */

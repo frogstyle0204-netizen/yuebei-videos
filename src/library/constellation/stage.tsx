@@ -5,7 +5,7 @@ import {scatter} from './geom';
 import {capFade, flashAt, glowGold, glowWhite, haze, K, KF} from './theme';
 
 /**
- * 星图线描风的舞台层：夜空底、白纸反转、角标、字幕、大字、星点标题、冲击白闪、推拉镜头。
+ * 3：虚无主义的舞台层：夜空底、白纸反转、角标、字幕、大字、星点标题、冲击白闪、推拉镜头。
  * 全部按 1920×1080 横屏设计；所有动画由帧号 f 算出。
  */
 

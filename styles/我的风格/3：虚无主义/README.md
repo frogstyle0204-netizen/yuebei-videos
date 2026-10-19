@@ -1,4 +1,4 @@
-# 星图线描风
+# 3：虚无主义
 
 ![预览](预览.jpg)
 
@@ -62,7 +62,7 @@
 
 ## 关键代码
 
-- 素材库：`src/library/constellation/`（目录见 `src/library/README.md`「星图线描风」一节）
+- 素材库：`src/library/constellation/`（目录见 `src/library/README.md`「3：虚无主义」一节）
 - 预览：Studio 里的 `library-constellation`（`src/library/previews/ConstellationDemo.tsx`，50 秒，10 场把所有组件演一遍；示例题目是「为什么我们只能看到月亮的一面」）
 
 ## 没有搬的东西

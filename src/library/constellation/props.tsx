@@ -4,7 +4,7 @@ import {bezier, circle, cut, ellipse, lengths, line, mirror, pathD, place, poly,
 import {K, KF} from './theme';
 
 /**
- * 星图线描风的实物层：一切都由星点串成、细线连起。核心是 StarShape，其余道具都只是给它喂笔画。
+ * 3：虚无主义的实物层：一切都由星点串成、细线连起。核心是 StarShape，其余道具都只是给它喂笔画。
  * 坐标一律是 1920×1080 舞台像素；所有动画由传进来的进度（0–1）或帧号算出。
  */
 
