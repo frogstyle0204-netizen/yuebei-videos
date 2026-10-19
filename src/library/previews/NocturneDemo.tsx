@@ -6,7 +6,7 @@ import {ChapterMark, Desat, Dip, LitWord, MemoryPhoto, Motes, NightBg, NSubtitle
 import {lineStarts, N, NF, pushIn, swing} from '../nocturne/theme';
 
 /**
- * 夜灯哲思风素材一览（1920×1080，45 秒）：每 150 帧一场，场与场之间暗场叠化；第 2～4 场用同一盏吊灯贯穿。
+ * 3：悲观主义素材一览（1920×1080，45 秒）：每 150 帧一场，场与场之间暗场叠化；第 2～4 场用同一盏吊灯贯穿。
  * 题目「习惯」和全部文案都是示例，用来检查每个组件的样子和动效；人物、栏目名都是占位。
  */
 const LEN = 150;

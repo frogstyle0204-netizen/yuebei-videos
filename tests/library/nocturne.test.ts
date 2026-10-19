@@ -3,7 +3,7 @@ import {lampSpot} from '../../src/library/nocturne/props';
 import {mixHex, splitMarks} from '../../src/library/nocturne/stage';
 import {blurIn, charIn, dip, fadeSwap, flash, flyTo, lineStarts, pushIn, readFrames, swing} from '../../src/library/nocturne/theme';
 
-describe('夜灯哲思风 nocturne', () => {
+describe('3：悲观主义 nocturne', () => {
   it('字幕重点词：【】拆成重点段，没闭合的当普通字', () => {
     expect(splitMarks('它叫【惯性】。')).toEqual([{text: '它叫'}, {text: '惯性', hi: true}, {text: '。'}]);
     expect(splitMarks('【没闭合')).toEqual([{text: '【没闭合'}]);
