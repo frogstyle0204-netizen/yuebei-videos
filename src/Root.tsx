@@ -128,6 +128,7 @@ import {TACTICAL_DEMO_FRAMES, TacticalDemo} from './library/previews/TacticalDem
 import {VESSEL_STAGE_DEMO_FRAMES, VesselStageDemo} from './library/previews/VesselStageDemo';
 import {WARM_DESK_DEMO_FRAMES, WarmDeskDemo} from './library/previews/WarmDeskDemo';
 import {EDITOR_ROOM_DEMO_FRAMES, EditorRoomDemo} from './library/previews/EditorRoomDemo';
+import {CRIMSON_GLOW_DEMO_FRAMES, CrimsonGlowDemo} from './library/previews/CrimsonGlowDemo';
 import {WARM_DESK_SHOW_FRAMES, WarmDeskCoverDemo, WarmDeskShowDemo} from './library/previews/WarmDeskShowDemo';
 import {PixelWardrobe} from './library/previews/PixelWardrobe';
 import {Wardrobe} from './library/previews/Wardrobe';
@@ -238,6 +239,7 @@ export const Root: React.FC = () => (
       <Composition id="library-vessel-stage" component={VesselStageDemo} durationInFrames={VESSEL_STAGE_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-warm-desk" component={WarmDeskDemo} durationInFrames={WARM_DESK_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-editor-room" component={EditorRoomDemo} durationInFrames={EDITOR_ROOM_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
+      <Composition id="library-crimson-glow" component={CrimsonGlowDemo} durationInFrames={CRIMSON_GLOW_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-warm-desk-show" component={WarmDeskShowDemo} durationInFrames={WARM_DESK_SHOW_FRAMES} fps={FPS} width={1920} height={1080} />
       <Still id="library-warm-desk-cover" component={WarmDeskCoverDemo} width={1080} height={1440} />
       <Composition id="library-pixel-wardrobe" component={PixelWardrobe} durationInFrames={150} fps={FPS} width={1080} height={1080} />

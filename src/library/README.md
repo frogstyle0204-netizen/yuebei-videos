@@ -215,3 +215,16 @@ Studio 里的 `library-wardrobe`（矢量版全部配饰与表情）、`library-
 | `props.tsx` | `Chalice` 金杯（`s` 变大、`fill` 液面、`pour` 注流，`tone` 金 / 褪色银白 / 黑杯）、`ClayCup` 陶杯（`crack` 裂纹、`steam` 热气）、`Pedestal` 展台（标签、`lit` 被点亮）、`CupRing` 俯视杯口（铜环 + 水面 + 月亮倒影）、`Figure` 剪影人物（站 / 跪 / 举手，`rim` 轮廓光方向）、`CrackedGround` 龟裂大地、`BurstRays` 放射光 + 彩屑 |
 
 要点：金和陶的语义别混用——金只给「更多 / 欲望 / 奢侈」，陶只给「够用 / 朴素」；字幕永远在顶部，主体放中下部，别和字幕抢位置；锚词用 `AnchorWord` 逐字收拢，踩配乐重拍；换场几乎都用 0.5～0.7 秒交叉淡化，能让上一场的线、杯口、光柱留到下一场就留。同屏放多个器物时给每个传不同的 `uid`（SVG 渐变 id 要唯一）。
+
+## 3：尼采与权力意志 `crimson-glow/`
+
+横屏 16:9 的心理 / 哲学 / 自我成长短片风格：暗场里一条赤红跑道、发光的米白火柴人、身后放大虚化的红色影子，宋体文案一行行从模糊里浮出来，配方见 `styles/我的风格/3：尼采与权力意志/README.md`。预览：Studio 里的 `library-crimson-glow`（40 秒，8 场，题目「拖延」）。
+
+| 文件 | 内容 |
+|---|---|
+| `theme.ts` | 配色 `C`（暖黑、米白、纯白光、玫红、影子红、跑道 / 地面红、场心、纸页、左红光 / 右冷光）、字体 `CF`（宋体中文、Garamond 西文）、`blurIn` 模糊柔入（10 帧）、`vis` 两头淡入淡出、`glow` 发光滤镜、`inkShadow` 文字柔投影、`heroGlow` 结论大字发光、`withAlpha` |
+| `stage.tsx` | `DarkStage` 暗场（`red` 左红光 = 退缩的声音、`cool` 右冷光 = 往前的声音）、`Vignette` 暗角、`Grain` 颗粒、`Bokeh` 观众席光斑（`drift` 视差）、`TrackFloor` 透视跑道（`center` 中线亮度、`centerDraw` 画出、`rungs` + `rungP` 横档由远到近亮起）、`SideFloor` 侧视地面（`stripe` 条纹宽、`scroll` 原地跑、`red` / `cool` 映光）、`Lines` 文案块（`tone`：ink / rose / hero / voice / call / dim，`【词】` 带红色残影，行间隔 `gap` 14 帧）、`ConceptTag` 左上概念标签、`ConceptTitle` 概念大标题收进角标、`SourceLine` 右下西文出处、`BrandTag` 右上账号框、`Soft` 柔入容器 |
+| `props.tsx` | `GlowFigure` 发光火柴人（`pose('stand' / 'slump' / 'walk' / 'run', t)`、`mixPose` 过渡、`tone` 米白 / 影子红、`ghost` 虚化、`bloom` 光团）、`joints`、`OvalLoop` 俯视椭圆跑道（`runner` 光点、`lit` 点亮上直道一段、`marks` 起终点）+ `ovalPoint`、`ClosedBook` 合上的书、`OpenBook` 摊开的本子（`written` 写到第几条）、`Chasm` 断崖（`span` 画线、`steps` + `lit` 落脚点逐个点亮） |
+| `fx.tsx` | `RingPulse` 光环脉冲 / 同心涟漪、`Flash` 白光爆闪（最亮那帧换场景）、`InkSwallow` 墨团吞没、`SlitSwap` 压缝翻开（7 + 8 帧）、`Flyover` 透视 → 俯视升机位（14 帧，`reverse` 反向）、`PushThrough` 推近穿线（接白光、下一场从白光里出来） |
+
+要点：几乎不硬切，换场景用 `fx.tsx` 里的动作把上下两场接起来；文字只用宋体、一律 `blurIn` 柔入，一个画面最多一处玫红；红色影子永远是 `ghost` + 垂头，白色小人才会站起来、走、跑；`SideFloor` / `Chasm` / `TrackFloor` 的 SVG 渐变 id 是固定的，同一帧里同种地面只放一个。
