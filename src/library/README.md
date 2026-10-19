@@ -240,3 +240,17 @@ Studio 里的 `library-wardrobe`（矢量版全部配饰与表情）、`library-
 | `props.tsx` | `PendantLamp` 吊灯（`angle` 摆角、`tone` 冷 / 暖、`light` 亮度、光锥和光晕）、`lampSpot` 光斑落点（喂给 `LitWord`）、`Figure` 站立剪影（轮廓光上亮下暗、心口「余烬」光点）、`SeatedFigure` 坐着的剪影、`Crowd` 暖色人群（景深分排、脚下光池、`hero` 放一个冷色主角）、`Chatter` 头顶闲聊小字、`LinkArcs` 人与人之间的发光虚线弧、`LightDoor` 光门 + 地面光、`NightWindow` 月夜窗（星点、楼群暖窗、斜射冷光）、`StudyRoom` 书房舞台（冷 / 暖）、`WallClock` 罗马数字挂钟、`MoonPainting` 月下远山挂画 |
 
 要点：一个画面只让一种光（冷或暖）占主导；字幕一句最多一个 `【重点词】`，节奏按 `lineStarts` 跟阅读速度走，不硬卡拍子，只把标题、闪白这类关键点对到配乐的拍上；吊灯要当贯穿元素时画在场景外面（场切换时它不动），`LitWord` 的 `light` 用 `lampSpot` 跟着摆角算；剪影人一律背影、不画脸。
+
+## 3：虚无主义 `constellation/`
+
+横屏 16:9 的无口播「一个问题追到底」风格（哲学、心理、天文、人生选择）：近黑夜空里，人、器物、文字都由星点串起、细线连起，聚拢、连线、点亮，又在反相闪帧里碎成星尘；全片黑白灰，只在结尾升起一次暖金日出。配方见 `styles/我的风格/3：虚无主义/README.md`。预览：Studio 里的 `library-constellation`。
+
+| 文件 | 内容 |
+|---|---|
+| `theme.ts` | 配色 `K`（按亮度分层：星点 → 大字 → 字幕 → 配角 → 角标；暖金只给结尾的答案；白纸反转场的纸、墨、灰人群）、字体 `KF`（宋体；西文斜体注用 Garamond + `fontStyle: 'italic'`）、`glowWhite` / `glowGold`、`haze` 模糊柔入、`RHYTHM`（一句 81 帧，淡出 6、黑 3、淡入 7）、`capFade`、`paceLines` 按节奏排字幕、`reframe` 有动机推拉、`flashAt` |
+| `geom.ts` | 星图几何纯函数：`line` `poly` `arc` `circle` `ellipse` `bezier` 取点，`resample` 等距串珠，`lengths` / `cut` 画出进度，`place` / `mirror`，`scatter` 散点起点，`pathD` |
+| `stage.tsx` | `NightSky` 夜空（椭圆亮区 + 约 170 颗闪烁星点）、`PaperSky` + `inverted` 白纸反转（进 6 帧、出 45 帧）、`ChapterTag` 左上章节签、`SeriesBox` 右上栏目框（`label` 每期自己传）+ 斜体 `note`、`KCaption` / `KCaptions` 字幕（`【】` 加粗提亮、`〔〕` 暖金）、`parseCap`、`Statement` 陈述大字（`paper` 黑字）、`ImpactWord` 逐字爆点字、`HookLine` 冷开问句蒙太奇（4 帧快溶）、`DotWord` 星点大标题（星尘聚拢 / 炸开）、`GhostWord` 42% 灰的幽灵星图字、`FlashFrame` 反相闪帧（`mix-blend-mode: difference`）、`Impact` 冲击波 + 放射线、`Stardust` 星尘溶解转场、`Reframe` 推拉容器、`Haze` 柔入容器 |
+| `props.tsx` | `StarShape` 通用星图形（吃任意折线：`gather` 聚拢、`draw` 连线、`shatter` 碎裂、`tone` 亮 / 配角 / 白纸墨黑）、`Figure` 星点小人（站 / 走 / 指 / 坐）+ `figureStrokes`、`Crowd` 配角一排（`gap` 给主角留位）、`StarWheel` 几何星轮 + `wheelStrokes`、`OrbitMap` 轨道图、`Planet` 星点星球（`mark` 朝向小旗）、`OpenBook`、`Steps`、`Kite`、`PaperPlane`、`Horizon` 地平线（`from` 起笔方向、`gold`）、`Sunrise` 暖金日出、`WordTrail` 词语长链 |
+| `puppets.tsx` | 冷开灰阶提线舞台：`PuppetStage`（丝线幕、顶光、地面光斑、`fall` 断线坠落）、原创关节人偶 `Mannequin`（`pose` 站 / 低头 / 走 / 抬头，`drop` 瘫下，`blur` 景深） |
+
+要点：暖金整片只用一次，放在最后的答案词和日出上，别提前用；星点密度分两档——人物、动物轮廓密（4–9px 一颗），几何图形稀（30–40px 一颗，让细线当主角）；聚形要按「散点冒出 → 聚拢 → 扫弧连线 → 细节 → 中心点亮」的顺序走满约 78 帧，太快就没有「星星连成星座」的感觉；字幕整句换、不逐字，不卡拍；冲击帧放在画面组件最后，用 `FlashFrame` 反相而不是纯白；`SeriesBox` 的栏目名不要照抄参考视频的水印。
