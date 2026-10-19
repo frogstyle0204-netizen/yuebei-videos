@@ -203,3 +203,15 @@ Studio 里的 `library-wardrobe`（矢量版全部配饰与表情）、`library-
 | `canvas.tsx` | `BrandMark` 原创示例 logo、`PopTitle` 短语逐个浮现的大标题（`〔词〕` 荧光笔）、`SitePage` 原创落地页示意（`seed` 换配色）、`BrowserMock` 浏览器窗口（`scrollAt` 页面滚动）、`FeatureCard` 功能卡 + 侧边弹出胶囊、`CheckSticker` 对勾贴纸、`ThumbWall` 页面缩略图墙、`LogoTiles` 集成卡片行（「已接入」胶囊）、`InkPill` 黑胶囊、`EndCard` 收尾卡 |
 
 要点：界面一直不动，节奏靠聊天冒泡、片段落轨和画布换镜头推进；画布里硬切，整屏只在结尾切一次收尾卡；荧光黄绿是唯一的重点色，其余颜色只属于小角色；网页一律用 `SitePage` 原创示意，不放真实网站截图和第三方 logo。
+
+## 3：享乐主义 `vessel-stage/`
+
+横屏 16:9 的无口播哲思短片（哲学、心理、生活道理）：近黑舞台、顶光光柱，金杯、陶杯、展台这些器物在暗场里「说话」，人物只是带暖色轮廓光的剪影；字幕固定在顶部居中，锚词逐字从模糊里收拢。配方见 `styles/我的风格/3：享乐主义/README.md`。预览：Studio 里的 `library-vessel-stage`（示例题目「旁边那只杯子」，40 秒 8 场）。
+
+| 文件 | 内容 |
+|---|---|
+| `theme.ts` | 配色 `V`（暗场近黑、字幕暖白、金器暗边 / 中 / 高光、陶土铜红、冷石灰展台、黄昏、夜海、剪影 + 轮廓光）、字体 `VF`（中文宋体、西文 Garamond 斜体）、`fadeBlur` 模糊柔入 / 淡出、`charIn` 逐字入场进度、`vis` 场间交叉淡化、`drawP` 线条画出、`parseMarks` 字幕重点标记（`**粗**`、`〔金〕`） |
+| `stage.tsx` | `DarkStage` 暗场底（`floorY` 细地平线）、`DuskSky` 黄昏天空 + 白日、`NightSea` 夜海星空、`SpotBeam` 顶光光柱（`tone` 冷灰 / 金，`on` 开灯）、`Bokeh` 散景、`Dust` 浮尘、`Grain`、`Vignette`、`TopicTag` 左上主题签、`TopCaption` 顶部居中字幕、`AnchorWord` 逐字锚词、`UnderlineWord` 下划线词（词走线留，接下一场地平线） |
+| `props.tsx` | `Chalice` 金杯（`s` 变大、`fill` 液面、`pour` 注流，`tone` 金 / 褪色银白 / 黑杯）、`ClayCup` 陶杯（`crack` 裂纹、`steam` 热气）、`Pedestal` 展台（标签、`lit` 被点亮）、`CupRing` 俯视杯口（铜环 + 水面 + 月亮倒影）、`Figure` 剪影人物（站 / 跪 / 举手，`rim` 轮廓光方向）、`CrackedGround` 龟裂大地、`BurstRays` 放射光 + 彩屑 |
+
+要点：金和陶的语义别混用——金只给「更多 / 欲望 / 奢侈」，陶只给「够用 / 朴素」；字幕永远在顶部，主体放中下部，别和字幕抢位置；锚词用 `AnchorWord` 逐字收拢，踩配乐重拍；换场几乎都用 0.5～0.7 秒交叉淡化，能让上一场的线、杯口、光柱留到下一场就留。同屏放多个器物时给每个传不同的 `uid`（SVG 渐变 id 要唯一）。

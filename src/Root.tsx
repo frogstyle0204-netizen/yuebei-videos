@@ -125,6 +125,7 @@ import {HALFTONE_DEMO_FRAMES, HalftoneDemo} from './library/previews/HalftoneDem
 import {BLACKGOLD_DEMO_FRAMES, BlackGoldDemo} from './library/previews/BlackGoldDemo';
 import {LAMPLIGHT_DEMO_FRAMES, LamplightDemo} from './library/previews/LamplightDemo';
 import {TACTICAL_DEMO_FRAMES, TacticalDemo} from './library/previews/TacticalDemo';
+import {VESSEL_STAGE_DEMO_FRAMES, VesselStageDemo} from './library/previews/VesselStageDemo';
 import {WARM_DESK_DEMO_FRAMES, WarmDeskDemo} from './library/previews/WarmDeskDemo';
 import {EDITOR_ROOM_DEMO_FRAMES, EditorRoomDemo} from './library/previews/EditorRoomDemo';
 import {WARM_DESK_SHOW_FRAMES, WarmDeskCoverDemo, WarmDeskShowDemo} from './library/previews/WarmDeskShowDemo';
@@ -234,6 +235,7 @@ export const Root: React.FC = () => (
       <Composition id="library-blackgold" component={BlackGoldDemo} durationInFrames={BLACKGOLD_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-lamplight" component={LamplightDemo} durationInFrames={LAMPLIGHT_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-tactical" component={TacticalDemo} durationInFrames={TACTICAL_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
+      <Composition id="library-vessel-stage" component={VesselStageDemo} durationInFrames={VESSEL_STAGE_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-warm-desk" component={WarmDeskDemo} durationInFrames={WARM_DESK_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-editor-room" component={EditorRoomDemo} durationInFrames={EDITOR_ROOM_DEMO_FRAMES} fps={FPS} width={1920} height={1080} />
       <Composition id="library-warm-desk-show" component={WarmDeskShowDemo} durationInFrames={WARM_DESK_SHOW_FRAMES} fps={FPS} width={1920} height={1080} />
