@@ -5,7 +5,7 @@ import {AnchorWord, Bokeh, DarkStage, DuskSky, Dust, Grain, NightSea, SpotBeam, 
 import {V, vis} from '../vessel-stage/theme';
 
 /**
- * 金器剧场风素材一览（1920×1080，40 秒）：每 150 帧一场，场与场之间 18 帧交叉淡化。
+ * 3：享乐主义素材一览（1920×1080，40 秒）：每 150 帧一场，场与场之间 18 帧交叉淡化。
  * 示例题目是自己编的（「旁边那只杯子」：为什么别人一多，你就觉得自己不够），只用来检查每个组件的样子和动效。
  */
 const LEN = 150;

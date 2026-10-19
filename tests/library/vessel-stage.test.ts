@@ -1,7 +1,7 @@
 import {describe, expect, it} from 'vitest';
 import {charIn, drawP, fadeBlur, parseMarks, vis} from '../../src/library/vessel-stage/theme';
 
-describe('金器剧场风 vessel-stage', () => {
+describe('3：享乐主义 vessel-stage', () => {
   it('模糊柔入：at 之前不可见，结束时完全清晰；淡出后归零', () => {
     expect(fadeBlur(0, 10).v).toBe(0);
     const done = fadeBlur(40, 10);
