@@ -228,3 +228,15 @@ Studio 里的 `library-wardrobe`（矢量版全部配饰与表情）、`library-
 | `fx.tsx` | `RingPulse` 光环脉冲 / 同心涟漪、`Flash` 白光爆闪（最亮那帧换场景）、`InkSwallow` 墨团吞没、`SlitSwap` 压缝翻开（7 + 8 帧）、`Flyover` 透视 → 俯视升机位（14 帧，`reverse` 反向）、`PushThrough` 推近穿线（接白光、下一场从白光里出来） |
 
 要点：几乎不硬切，换场景用 `fx.tsx` 里的动作把上下两场接起来；文字只用宋体、一律 `blurIn` 柔入，一个画面最多一处玫红；红色影子永远是 `ghost` + 垂头，白色小人才会站起来、走、跑；`SideFloor` / `Chasm` / `TrackFloor` 的 SVG 渐变 id 是固定的，同一帧里同种地面只放一个。
+
+## 3：悲观主义 `nocturne/`
+
+横屏 16:9 的哲学 / 心理 / 情绪类无口播短片：深夜房间、一盏吊灯、心口发光的剪影人，冷（月光、独处）暖（灯、热闹、回忆）两套光，字幕当旁白。配方见 `styles/我的风格/3：悲观主义/README.md`。预览：Studio 里的 `library-nocturne`（示例题目「习惯」，45 秒 9 场）。
+
+| 文件 | 内容 |
+|---|---|
+| `theme.ts` | 配色 `N`（暗场底、冷房间、月光、冷白、四档琥珀、剪影、西文灰）、字体 `NF`（宋体 Black / SemiBold，Garamond 斜体西文）、字号 `NS`、`blurIn` 模糊收拢（大字 10 帧）、`charIn` 逐字（间隔 4 帧、8 帧完成）、`fadeSwap` 字幕先出后进（8 / 6 帧）、`readFrames` / `lineStarts` 按字数排字幕（约 2.5 秒一句）、`swing` 钟摆（72 帧一个来回）、`dip` 暗场叠化、`flash` 闪白、`flyTo` 飞到角落、`pushIn` 收尾慢推 |
+| `stage.tsx` | `NightBg` 暗场底、`Motes` 浮尘、`ChapterMark` 左上章节名、`SeriesTag` 右上细线框栏目名、`PersonNote` 人物名 + 生卒年、`NSubtitle` 底部字幕（`【词】` 变琥珀，`splitMarks` 拆分）、`TitleCard` 逐字标题 + 飞到左上角变章节名、`Shards` 灰白纸屑、`Desat` 去色、`LitWord` 被灯照亮的大字（`light` 光斑位置决定亮暗，暖 / 冷两调）、`SplitDuo` 分屏对照（左冷右暖、中间发光细线、`render` 画各半内容）、`MemoryPhoto` 暖色回忆照片（children 按舞台坐标画，自动缩进照片调成暖褐）、`Dip` 暗场叠化容器、`WhiteFlash` 闪白、`mixHex` 混色 |
+| `props.tsx` | `PendantLamp` 吊灯（`angle` 摆角、`tone` 冷 / 暖、`light` 亮度、光锥和光晕）、`lampSpot` 光斑落点（喂给 `LitWord`）、`Figure` 站立剪影（轮廓光上亮下暗、心口「余烬」光点）、`SeatedFigure` 坐着的剪影、`Crowd` 暖色人群（景深分排、脚下光池、`hero` 放一个冷色主角）、`Chatter` 头顶闲聊小字、`LinkArcs` 人与人之间的发光虚线弧、`LightDoor` 光门 + 地面光、`NightWindow` 月夜窗（星点、楼群暖窗、斜射冷光）、`StudyRoom` 书房舞台（冷 / 暖）、`WallClock` 罗马数字挂钟、`MoonPainting` 月下远山挂画 |
+
+要点：一个画面只让一种光（冷或暖）占主导；字幕一句最多一个 `【重点词】`，节奏按 `lineStarts` 跟阅读速度走，不硬卡拍子，只把标题、闪白这类关键点对到配乐的拍上；吊灯要当贯穿元素时画在场景外面（场切换时它不动），`LitWord` 的 `light` 用 `lampSpot` 跟着摆角算；剪影人一律背影、不画脸。
