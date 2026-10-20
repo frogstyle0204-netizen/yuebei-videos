@@ -1,0 +1,21 @@
+{
+  "note": "四支参考视频共用的那首配乐的实测网格（只是数字，曲子本身不进仓库）。时间单位秒，30 fps。",
+  "bpm": 112.91,
+  "beatSec": 0.5314,
+  "barSec": 2.1256,
+  "firstBeatSec": 0.110,
+  "barStartSec": "0.110 + 2.1256 * k",
+  "trackLengthSec": 126.0,
+  "sections": [
+    {"name": "前奏（安静）", "bars": [0, 7], "sec": [0.0, 17.11], "levelDb": -21},
+    {"name": "第一重拍 → 主段", "bars": [8, 35], "sec": [17.11, 76.63], "levelDb": [-19, -16]},
+    {"name": "回落（安静）", "bars": [36, 43], "sec": [76.63, 93.64], "levelDb": [-24, -22]},
+    {"name": "第二重拍 → 尾段", "bars": [44, 59], "sec": [93.64, 126.0], "levelDb": -19}
+  ],
+  "hits": [
+    {"sec": 17.11, "frame": 513, "bar": 8, "jumpDb": 7.4},
+    {"sec": 93.64, "frame": 2809, "bar": 44, "jumpDb": 7.3}
+  ],
+  "usage": "第 0 帧直接起，不淡入；片尾直接切断，不淡出；长于 126 秒就从头再接一遍。",
+  "measuredOn": ["vessel-stage", "crimson-glow", "nocturne", "constellation"]
+}
